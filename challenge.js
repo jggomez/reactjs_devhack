@@ -20,7 +20,7 @@ const wordsIncludeBE = b.filter(w => w.indexOf('be') > -1);
 console.log(wordsIncludeBE);
 
 // 4. Return a list with all the false values (for c).
-const listValuesFalse = c.filter(obj => Object.values(obj).filter(v => v === false) !== undefined);
+const listValuesFalse = c.map(v => Object.values(v)).filter(v => v === false);
 console.log(listValuesFalse);
 
 // 5. Menores de edad
