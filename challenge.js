@@ -1,6 +1,6 @@
 const a = [1, 3, 4, 6, 12, 15, 23, 20];
 const b = ['a', 'once a time', 'machine learning', 'beer', 'bear', 'beat'];
-const c = [{ key1: 'abc' }, { key2: 1.2 }, { key3: false }, { key4: null }, { key5: undefined }, { key6: '' }];
+const c = [{ key1: 'abc' }, { key2: 1.2 }, { key3: false }, { key4: false }, { key5: undefined }, { key6: '' }];
 const people =
     [{ name: 'juan', lastName: 'gomez', edad: 16 },
     { name: 'jose', lastName: 'roa', edad: 23 },
@@ -20,7 +20,7 @@ const wordsIncludeBE = b.filter(w => w.indexOf('be') > -1);
 console.log(wordsIncludeBE);
 
 // 4. Return a list with all the false values (for c).
-const listValuesFalse = c.map(v => Object.values(v)).filter(v => v === false);
+const listValuesFalse = c.filter(v => v[Object.keys(v)[0]] === false);
 console.log(listValuesFalse);
 
 // 5. Menores de edad
