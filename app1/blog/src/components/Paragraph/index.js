@@ -8,8 +8,8 @@ class Paragraph extends Component {
     }
 
     onColorAndFontChange = () => {
-        let color = this.state.color === 'white' ? 'red' : 'white';
-        let fontSize = this.state.fontSize === '16px' ? '24px' : '16px';
+        const color = this.state.color === 'white' ? 'red' : 'white';
+        const fontSize = this.state.fontSize === '16px' ? '24px' : '16px';
         this.setState({ color, fontSize });
     }
 
